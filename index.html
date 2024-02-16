@@ -11,10 +11,42 @@
 </head>
 
 <body>
-    <header>
+    <header class="bg-gray-300 p-4">
+        <nav class="flex container mx-auto text-center items-center justify-between space-x-96">
+            <div class="logo-container">
+                <img class="logo w-20" src="./images/logo.png" alt="" />
+            </div>
+            <div class="profile flex space-x-5">
+                <div class="cart-icon-container flex">
+                    <img id="menu-cart" class="w-8" src="./images/cart.png" alt="" />
+                    <h2 id="cart-count" class="text-3xl font-semibold text-orange-500">0</h2>
+                </div>
+                <div class="flex space-x-72 text-xl">
+                    <a href="#">Home</a>
+                    <a href="#">Setting</a>
+                </div>
 
+            </div>
+            <div class=" rounded-[100%] border-2 border-gray-400 p-2">
+                <img class="profile-logo w-16 h-16" src="./images/man.png" alt="" />
+            </div>
+        </nav>
     </header>
     <main>
+        <section class="container mx-auto my-16 ">
+            <div class="flex text-center items-center justify-between">
+                <div class="space-y-4">
+                    <h1 class="text-7xl font-bold ">Lets <span class="text-orange-500">Travel</span></h1>
+                    <p class="text-xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, ratione?
+                    </p>
+                    <h3 class="text-3xl font-semibold">Total Budget: 900 $</h3>
+                </div>
+                <div class="w-full max-w-fit">
+                    <img src="./images/banner.png" alt="">
+                </div>
+
+            </div>
+        </section>
 
     </main>
     <script src="./app.js"></script>
