@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lets Travel</title>
+    <title>Budget Travel</title>
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/style.css">
+
 </head>
 
-<body>
-    <header class="bg-gray-300 p-4">
+<body class="poppins-font">
+    <header class="bg-gray-100 p-4">
         <nav class="flex container mx-auto text-center items-center justify-between space-x-96">
             <div class="logo-container">
                 <img class="logo w-20" src="./images/logo.png" alt="" />
@@ -19,9 +21,9 @@
             <div class="profile flex space-x-5">
                 <div class="cart-icon-container flex">
                     <img id="menu-cart" class="w-8" src="./images/cart.png" alt="" />
-                    <h2 id="cart-count" class="text-3xl font-semibold text-orange-500">0</h2>
+                    <h2 id="cart-count" class="text-3xl font-semibold text-[#FD6E0A]">0</h2>
                 </div>
-                <div class="flex space-x-72 text-xl">
+                <div class="flex space-x-72 text-xl text-[#FD6E0A] font-semibold">
                     <a href="#">Home</a>
                     <a href="#">Setting</a>
                 </div>
@@ -34,10 +36,12 @@
     </header>
     <main>
         <section class="container mx-auto my-16 ">
-            <div class="flex text-center items-center justify-between">
+            <div class="lg:flex text-center items-center justify-between">
                 <div class="space-y-4">
-                    <h1 class="text-7xl font-bold ">Lets <span class="text-[#FD6E0A]">Travel</span></h1>
-                    <p class="text-xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, ratione?
+                    <h1 class="text-7xl font-bold garamond-font ">Lets <span class="text-[#FD6E0A]">Travel</span></h1>
+                    <p class="text-xl">Please note, prices can vary based on your travel style, speed, and other
+                        variables. If you're traveling as a family of three or four people, the price per person often
+                        goes down because kid's tickets are cheaper and hotel rooms can be shared.
                     </p>
                     <h3 class="text-3xl font-semibold">Total Budget: 900 $</h3>
                 </div>
@@ -49,24 +53,96 @@
 
 
         <section class="container mx-auto my-20">
-            <div class="grid grid-cols-2">
-                <!-- card-1 -->
-                <div class="card card-side w-2/3 bg-base-100 border-2 shadow-xl">
-                    <figure><img class="w-[300px] p-4" src="./images/coxBazar.jpg" alt="Movie" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title text-3xl font-bold">Cox Bazar </h2>
-                        <p>Cost: 500 $</p>
-                        <div class="card-actions ">
-                            <button class="btn bg-[#FD6E0A] text-white ">Add to Card</button>
+            <div class="lg:flex gap-14">
+                <!-- card-place -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <!-- card-1 -->
+                    <div class="card card-side  bg-base-100 border-2 shadow-xl">
+                        <figure><img class="w-[300px] p-4" src="./images/coxBazar.jpg" alt="Movie" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title text-3xl font-bold garamond-font">Cox Bazar </h2>
+                            <p>Cost: 500 $</p>
+                            <div class="card-actions ">
+                                <button class="btn bg-[#FD6E0A] text-white lg:text-xl font-semibold">Add to
+                                    Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-2 -->
+                    <div class="card card-side bg-base-100 border-2 shadow-xl">
+                        <figure><img class="w-[300px] p-4" src="./images/Dhaka.jpg" alt="Movie" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title text-3xl font-bold garamond-font">Dhaka</h2>
+                            <p>Cost: 500 $</p>
+                            <div class="card-actions ">
+                                <button class="btn bg-[#FD6E0A] text-white lg:text-xl font-semibold">Add to
+                                    Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-3 -->
+                    <div class="card card-side  bg-base-100 border-2 shadow-xl">
+                        <figure><img class="w-[300px] p-4" src="./images/shajek.jpg" alt="Movie" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title text-3xl font-bold garamond-font">Shajek</h2>
+                            <p>Cost: 500 $</p>
+                            <div class="card-actions ">
+                                <button class="btn bg-[#FD6E0A] text-white lg:text-xl font-semibold">Add to
+                                    Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-4 -->
+                    <div class="card card-side bg-base-100 border-2 shadow-xl">
+                        <figure><img class="w-[300px] p-4" src="./images/shundar-ban.jpg" alt="Movie" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title text-3xl font-bold garamond-font">Shundar Ban</h2>
+                            <p>Cost: 500 $</p>
+                            <div class="card-actions ">
+                                <button class="btn bg-[#FD6E0A] text-white lg:text-xl font-semibold">Add to
+                                    Card</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-
+                <!-- calculate card -->
+                <div class="card lg:w-[500px] bg-base-100 shadow-xl border-2">
+                    <div class="card-body items-center text-center space-y-1">
+                        <h2 class="card-title text-2xl font-bold garamond-font border-b-2">Card</h2>
+                        <div class="gap-2">
+                            <div class="space-y-2">
+                                <hr />
+                                <hr />
+                            </div>
+                            <p class="">Total Cost: 0 $</p>
+                            <div class="card-actions justify-center">
+                                <button class="btn bg-[#FD6E0A] text-white">Bus + 100</button>
+                                <button class="btn bg-[#FD6E0A] text-white">Train - 200</button>
+                                <button class="btn bg-[#FD6E0A] text-white">Flight + 500</button>
+                            </div>
+                            <p class="border-t-2 mt-4">Grand Total : 0 $</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-
     </main>
+    <footer class="footer items-center p-4 bg-neutral text-neutral-content">
+        <div class="container mx-auto my-14 items-center justify-center">
+
+            <nav class=" grid grid-cols-3 gap-4 md:place-self-center md:justify-self-center">
+                <a> <img src="./images/facebook 1.png" alt=""></a>
+                <a> <img src="./images/twitter 1.png" alt=""></a>
+                <a> <img src="./images/instagram 1.png" alt=""> </a>
+            </nav>
+            <aside class="items-center grid-flow-col">
+                <p>Copyright © 2024 - All right reserved By HASIB</p>
+            </aside>
+        </div>
+    </footer>
+
     <script src="./app.js"></script>
+
 </body>
 
 </html>
