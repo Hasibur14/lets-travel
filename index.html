@@ -14,7 +14,7 @@
 
 <body class="poppins-font">
     <header class="bg-gray-100 p-4">
-        <nav class="flex container mx-auto text-center items-center justify-between space-x-96">
+        <nav class="flex container mx-auto text-center items-center lg:justify-between lg:space-x-96">
             <div class="logo-container">
                 <img class="logo w-20" src="./images/logo.png" alt="" />
             </div>
@@ -23,7 +23,7 @@
                     <img id="menu-cart" class="w-8" src="./images/cart.png" alt="" />
                     <h2 id="cart-count" class="text-3xl font-semibold text-[#FD6E0A]">0</h2>
                 </div>
-                <div class="flex space-x-72 text-xl text-[#FD6E0A] font-semibold">
+                <div class="flex space-x-4 lg:space-x-72 text-xl text-[#FD6E0A] font-semibold">
                     <a href="#">Home</a>
                     <a href="#">Setting</a>
                 </div>
@@ -61,9 +61,9 @@
                         <figure><img class="w-[300px] p-4" src="./images/coxBazar.jpg" alt="Movie" /></figure>
                         <div class="card-body">
                             <h2 class="card-title text-3xl font-bold garamond-font">Cox Bazar </h2>
-                            <p>Cost: 500 $</p>
+                            <p>Cost: <span>500</span> $</p>
                             <div class="card-actions ">
-                                <button class="btn bg-[#FD6E0A] text-white lg:text-xl font-semibold">Add to
+                                <button class="btn add-btn bg-[#FD6E0A] text-white lg:text-xl font-semibold">Add to
                                     Card</button>
                             </div>
                         </div>
@@ -73,9 +73,9 @@
                         <figure><img class="w-[300px] p-4" src="./images/Dhaka.jpg" alt="Movie" /></figure>
                         <div class="card-body">
                             <h2 class="card-title text-3xl font-bold garamond-font">Dhaka</h2>
-                            <p>Cost: 500 $</p>
+                            <p>Cost: <span>300</span> $</p>
                             <div class="card-actions ">
-                                <button class="btn bg-[#FD6E0A] text-white lg:text-xl font-semibold">Add to
+                                <button class="btn add-btn bg-[#FD6E0A] text-white lg:text-xl font-semibold">Add to
                                     Card</button>
                             </div>
                         </div>
@@ -85,9 +85,9 @@
                         <figure><img class="w-[300px] p-4" src="./images/shajek.jpg" alt="Movie" /></figure>
                         <div class="card-body">
                             <h2 class="card-title text-3xl font-bold garamond-font">Shajek</h2>
-                            <p>Cost: 500 $</p>
+                            <p>Cost: <span>500</span> $</p>
                             <div class="card-actions ">
-                                <button class="btn bg-[#FD6E0A] text-white lg:text-xl font-semibold">Add to
+                                <button class="btn add-btn bg-[#FD6E0A] text-white lg:text-xl font-semibold">Add to
                                     Card</button>
                             </div>
                         </div>
@@ -97,9 +97,9 @@
                         <figure><img class="w-[300px] p-4" src="./images/shundar-ban.jpg" alt="Movie" /></figure>
                         <div class="card-body">
                             <h2 class="card-title text-3xl font-bold garamond-font">Shundar Ban</h2>
-                            <p>Cost: 500 $</p>
+                            <p>Cost: <span>300</span> $</p>
                             <div class="card-actions ">
-                                <button class="btn bg-[#FD6E0A] text-white lg:text-xl font-semibold">Add to
+                                <button class="btn add-btn bg-[#FD6E0A] text-white lg:text-xl font-semibold">Add to
                                     Card</button>
                             </div>
                         </div>
@@ -110,17 +110,19 @@
                     <div class="card-body items-center text-center space-y-1">
                         <h2 class="card-title text-2xl font-bold garamond-font border-b-2">Card</h2>
                         <div class="gap-2">
-                            <div class="space-y-2">
+                            <div class="">
                                 <hr />
+                                <ul id="selected-place-container" class="selected-place-container">
+                                </ul>
                                 <hr />
                             </div>
-                            <p class="">Total Cost: 0 $</p>
+                            <p class="font font-semibold">Total Cost: <span id="total-cost">0</span> $</p>
                             <div class="card-actions justify-center">
                                 <button class="btn bg-[#FD6E0A] text-white">Bus + 100</button>
                                 <button class="btn bg-[#FD6E0A] text-white">Train - 200</button>
                                 <button class="btn bg-[#FD6E0A] text-white">Flight + 500</button>
                             </div>
-                            <p class="border-t-2 mt-4">Grand Total : 0 $</p>
+                            <p class="border-t-2 font-semibold mt-4">Grand Total : <span id="grand-total">0</span> $</p>
                         </div>
                     </div>
                 </div>

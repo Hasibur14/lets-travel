@@ -8,3 +8,7 @@
 .poppins-font{
     font-family: "Poppins", sans-serif;
 }
+
+li{
+    display: flex;
+}
