@@ -18,23 +18,56 @@ for (const btn of allButton) {
 
         li.appendChild(p1);
         li.appendChild(p2);
+
+        const budget = document.getElementById('budget');
+        const convertedBudget = parseInt(budget);
+        document.getElementById('budget').innerText = convertedBudget - parseInt(price);
+
         selectedPlace.appendChild(li);
 
-        const totalCost = document.getElementById('total-cost').innerText;
-        const convertedTotalCost = parseInt(totalCost);
-        const sum  = convertedTotalCost + parseInt(price);
+        //calculate total price
+        getTotalCost("total-cost", parseInt(price));
 
-        const grandTotal = document.getElementById('grand-total').innerText;
-        const convertedGrandTotal = parseInt(grandTotal);
-        const sum2 = convertedGrandTotal + sum;
-         console.log(grandTotal);
+        //calculate grand price
+        grandTotalCost("grand-total", parseInt(price));
 
-         setInnerText('grand-total',sum2)
-        setInnerText('total-cost',sum)
-        setInnerText('cart-count', count)
+        setInnerText('cart-count', count);
     });
-}
+};
 
+
+//Total cost
+function getTotalCost(id, value) {
+    const totalCost = document.getElementById(id).innerText;
+    const convertedTotalCost = parseInt(totalCost);
+    const sum = convertedTotalCost + parseInt(value);
+    setInnerText('total-cost', sum);
+};
+
+
+// grand Total
+function grandTotalCost(category) {
+    const totalCost = document.getElementById("total-cost").innerText;
+    const convertedTotalCost = parseInt(totalCost);
+    setInnerText('grand-total', convertedTotalCost);
+
+    if (category === "bus") {
+        setInnerText('grand-total', convertedTotalCost + 100);
+    }
+    else if (category === "train") {
+        setInnerText('grand-total', convertedTotalCost - 200);
+    }
+    else if (category === "flight") {
+        setInnerText('grand-total', convertedTotalCost + 500);
+    }
+    else {
+        setInnerText("grand-total", convertedTotalCost);
+    }
+};
+
+
+
+// Inner Text show
 function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
 }
